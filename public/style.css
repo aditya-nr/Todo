@@ -1,0 +1,233 @@
+/* global */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+
+:root {
+    /* font size */
+    --font-size-small: 15px;
+    --font-size-medium: 36px;
+    --font-size-large: 48px;
+    /* colors */
+    --color-bg: #DDFFBB;
+    --color-light: #C7E9B0;
+    --color-medium: #B3C99C;
+    --color-dark: #A4BC92;
+    --color-font-light: #296234;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.wrapper {
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+    background: linear-gradient(135deg, var(--color-bg), var(--color-dark));
+
+}
+
+.hidden {
+    display: none;
+}
+
+.msg {
+    color: red;
+    font-size: var(--font-size-small);
+}
+
+/* panel */
+.panel {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    padding: 1rem 2rem;
+}
+
+.panel button {
+    padding: 1rem;
+}
+
+/* container */
+.container {
+    width: 100%;
+    max-width: 540px;
+    background-color: white;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 0 10px 10px var(--color-dark);
+}
+
+/* home page */
+
+.heading {
+    color: #002765;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.heading button {
+    padding: 12px 27px;
+    border: none;
+    background: var(--color-light);
+    color: var(--color-font-light);
+    border-radius: 5px;
+}
+
+.heading img {
+    width: 30px;
+    margin-left: 1px;
+}
+
+.form {
+    background-color: #edeef0;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    margin-bottom: 25px;
+    justify-content: space-between;
+}
+
+input {
+    border: none;
+    flex: 1;
+    outline: none;
+    background: transparent;
+}
+
+.form button {
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: var(--color-light);
+    color: var(--color-font-light);
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+ul li {
+    list-style-type: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    cursor: pointer;
+    position: relative;
+}
+
+ul li::before {
+    content: "";
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(./assets/untick.svg);
+    background-size: cover;
+    background-position: center;
+    top: 8px;
+    left: 8px;
+}
+
+ul li span {
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(./assets/delete.svg);
+    background-size: cover;
+    background-position: center;
+    top: 8px;
+    right: 18px;
+}
+
+ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    content: "";
+    background-image: url(./assets/tick.svg);
+}
+
+/* login page */
+.loginpage {
+    font-size: var(--font-size-medium);
+    max-width: 400px;
+    height: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.loginpage h2 {
+    font-size: var(--font-size-large);
+    margin-bottom: 20px;
+}
+
+.loginpage input[type="text"],
+.loginpage input[type="password"],
+.loginpage input[type="submit"] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.loginpage input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+.loginpage input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* register page */
+.register {
+    font-size: var(--font-size-medium);
+    max-width: 400px;
+    height: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.register h2 {
+    margin-bottom: 20px;
+}
+
+.register input[type="text"],
+.register input[type="password"],
+.register input[type="submit"] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.register input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+.register input[type="submit"]:hover {
+    background-color: #45a049;
+}

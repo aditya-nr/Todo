@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="any" href="./favicon.ico">
+    <title>TODO</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- panel -->
+        <div class="panel">
+            <button onclick="showLoginpage()" id="login">log in</button>
+            <button class="uname hidden" id="uname">Dummy</button>
+            <button class="logout hidden" onclick="logout()" id="logout">log out</button>
+        </div>
+
+        <div class="container">
+            <!-- home page -->
+            <div class="homepage" id="homepage">
+                <div class="heading">
+                    <div>
+                        TODO list
+                        <img src="./assets/todo.svg">
+                    </div>
+                    <div>
+                        <button class="Save hidden" onclick="putData()" id="save">save</button>
+                        <button class="Refresh hidden" id="refresh" onclick="getData()">refresh</button>
+                    </div>
+                </div>
+                <form name="add" class="form" onsubmit="return false">
+                    <input type="text" name="task" id="task" placeholder="Type here ...">
+                    <button onclick="addTodo()">Add</button>
+                </form>
+                <ul class="list" id="list"></ul>
+            </div>
+
+            <!-- login page -->
+            <div class="loginpage hidden" id="loginpage">
+                <h2>Login</h2>
+                <div class="msg" id="loginmsg"></div>
+                <form onsubmit="return false">
+                    <input type="text" name="uid" id="loginuid" placeholder="Username" required><br>
+                    <input type="password" id="loginpwd" name="pwd" placeholder="Password" required><br>
+                    <input type="submit" onclick="login()" value="Login">
+                </form>
+                <p>Don't have an account? <a href="#" onclick="showRegpage()">Create account</a>.</p>
+            </div>
+
+            <!-- regester page -->
+            <div class="register" id="register">
+                <div class="msg" id="regmsg"></div>
+                <h2>Create Account</h2>
+                <form onsubmit="return false">
+                    <input type="text" id="reguid" placeholder="Username" required><br>
+                    <input type="password" id="regpwd" placeholder="Password" required><br>
+                    <input type="password" id="regcpwd" placeholder="Confirm Password" required><br>
+                    <input type="submit" onclick="reg()" value="Register">
+                </form>
+                <p>Already have an account? <a href="#" onclick="showLoginpage()">Login</a>.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- javascript -->
+    <script src="./main.js"></script>
+</body>
+
+</html>
