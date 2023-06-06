@@ -1,7 +1,7 @@
 // installed module
 const express = require('express');
 const path = require('path');
-require('dotenv').config();
+// require('dotenv').config();
 
 //custom module
 require('./db/config.js');
