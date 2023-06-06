@@ -1,4 +1,4 @@
-const URL_BASE = "http://localhost:3300";
+const URL_BASE = "https://todo-f35v.onrender.com"
 // pages
 const homepage = document.getElementById('homepage');
 const loginpage = document.getElementById('loginpage');
